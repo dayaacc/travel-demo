@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>【携程机票】飞机票查询,机票预订,机票价格查询,打折特价机票</title>
+	<link rel="ICON" href="http://www.ctrip.com/favicon.ico">
+	<link rel="stylesheet" href="css/hnav.css">
+	<link rel="stylesheet" href="css/list.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnav.js"></script>
+	<script type="text/javascript" src="js/list.js"></script>
+</head>
+<body>
+	<!--header start-->
+	<header>
+		<div class="header_cnt">
+			<div class="logo">
+				<a title="携程旅行网" href="http://www.ctrip.com/">携程旅行网</a>
+			</div>
+			<div class="top_search">
+				<input type="text" placeholder="疯玩一夏天 ￥99住五星" value="">
+				<button type="button" id="search_button_global"></button>
+			</div>
+			<div class="nav_bar">
+				<div class="language">
+					<div class="language_cnt">
+						<a href="http://www.ctrip.com/" rel="nofollow" class="selected" >
+							<span><em class="ico-global"></em>Global Sites<b class="arrow"></b>
+							</span>
+						</a>
+						<div class="lang_checkbox">
+							<ul class="lang_list" >
+						            <li class="first">
+						            	<a href="http://www.ctrip.com.hk/#from=click_hk">香港（繁体）</a>
+						            </li>
+						            <li>
+						            	<a href="http://www.ctrip.com.hk/#from=click_hken">Hong Kong(English)</a>
+						            </li>
+						            <li>
+						            	<a href="http://english.ctrip.com/#from=click_en">English</a>
+						            </li>
+						            <li>
+						            	<a href="http://jp.ctrip.com/#from=click_jp">日语版</a>
+						            </li>
+						            <li>
+						            	<a href="http://www.ctrip.co.kr/#from=click_kr">韩语版</a>
+						            </li>
+						            <li>
+						            	<a href="http://www.ctrip.sg/#from=click_sg">Singapore</a>
+						            </li>
+						            <li>
+						            	<a href="http://www.ctrip.co.id/#from=click_id">Bahasa Indonesia</a>
+						            </li>
+						            <li>
+						            	<a href="http://www.ctrip.my/#from=click_my">Bahasa Malaysia</a>
+						            </li>
+						            <li>
+						            	<a href="http://www.ctrip.co.th/#from=click_th">ภาษาไทย</a>
+						            </li>
+						            <li>
+						            	<a href="http://fr.ctrip.com/#from=click_fr">Français</a>
+						            </li>
+						            <li>
+						            	<a href="http://de.ctrip.com/#from=click_de">Deutsch</a>
+						            </li>
+						            <li>
+						            	<a href="http://es.ctrip.com/#from=click_es">Español</a>
+						            </li>
+						            <li class="last">
+						            	<a href="http://ru.ctrip.com/#from=click_ru">Русский</a>
+						            </li>
+				            </ul>
+						</div>
+					</div>
+				</div>
+				<div class="service">
+					<a href="http://kefu.ctrip.com/" class="service_pp">客服中心</a>
+				</div>
+				<div class="service_phone">
+					<a class="service_tel">
+						<span title="免境内长话费">国内：<em class="service_telnum">400-830-6666</em><b class="arrow"></b>
+						</span>
+						<div class="service_phoneall">
+						<ul class="service_list">
+							<li>
+								<dl>
+									<dd>
+										<p style="color:#999">（或）</p>
+										<em>400-820-6666</em>
+									</dd>
+									<dd>香港：<em>+ 852-3069-9966</em>
+									</dd>
+									<dd>海外：<em>+ 86-21-3406-4888</em>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					</a>
+				</div>
+				<ul class="cui_wireless">
+	        		<li class="appli">
+	        			<a href="http://app.ctrip.com" class="sjapp" >
+	        			<i></i>
+	        			</a>
+	        		<div class="app">
+	        			<i class="sanjiao"style="right:40px;"></i>
+	        			<div  class="app_inner">
+	              			<dl>
+	                			<dt>手机扫码快速下载</dt>
+	                			<dd>
+	            					<img src="images/app.jpg">
+	            				</dd>
+	              			</dl>
+	              			<a href="http://app.ctrip.com">携程旅行手机版<i>&gt;</i>
+	              			</a>
+	              		</div>
+	          		</div>
+			        </li>
+			        <li class="wxappli">
+			        	<a href="##" class="wxapp"><i></i></a>
+			        	<div class="app">
+			        		<i class="sanjiao_r"></i>
+			        		<div class="app_inner">
+			              		<dl class="cui_wireless_type">
+			                		<dt>携程订阅号:helloctrip</dt>
+			                		<dd>
+			                			<img src="images/wx.jpg">
+			                		</dd>
+			              </dl>扫一扫,领旅行福利</div>
+			          </div>
+			        </li>
+			      </ul>
+			</div>
+		</div>
+	</header>
+	<!--nav start-->
+	<nav>
+		<div class="nav_cnt">
+			<ul class="nav_list">
+				<li>
+					<a href="http://www.ctrip.com/">首页</a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://hotels.ctrip.com/">酒店<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">旅游<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">机票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">火车<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">汽车票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">用车
+						<span class="label_cn">
+							<em>暑期大促</em>
+							<i class="triangle"></i>
+						</span>
+						<i class="cui_ico_triangle"></i>
+						<span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">门票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">团购<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">攻略<span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">全球购<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">礼品卡<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">商旅<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">邮轮<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">天海邮轮<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li></li>
+				<li>
+					<a href="http://vacations.ctrip.com/">更多<i class="cui_ico_triangle"></i><span class="point"></span></a>
+				</li>
+				<li id="login_li">
+					<ul>
+						<li class="login_li_one">
+							<a href="">登录</a>
+							<span>|</span>
+							<a href="">注册</a>
+						</li>
+						<li class="myxiecheng">
+							<span>
+								<a href="">我的携程
+									<b class="arrow"></b>
+								</a>
+							</span>
+							<ul id="login_ipt">
+								<li>
+									<div>
+										<input type="submit" value="登录">
+									</div>
+								</li>
+								<li>
+									<a href="">全部订单</a>
+								</li>
+								<li>
+									<a href="">手机号查订单</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="nav_xx">
+				<ul class="nav_jd">
+					<li><a href="http://hotels.ctrip.com/">国内酒店</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">海外酒店</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">海外名宿+短租</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">团购</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">特价酒店</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">途家公寓</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">酒店+景点</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">客栈民宿</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">团队房•长住房</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">会议</a></li>
+					<li>
+						<a class="cui_ico_order1" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>酒店订单 &gt;</a>
+					</li>
+				</ul>
+				<ul class="nav_ly">
+					<li><a href="http://hotels.ctrip.com/" class="ly_index">旅游首页</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">周末游</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">跟团游</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">自由行</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">邮轮</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">酒店+景点</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">当地玩乐</a></li>
+					<li></li>
+					<li>
+						<a href="http://hotels.ctrip.com/" style="z-index:12;">主题游
+							<span class="label_en" style="right:-9px;">
+								<em>HOT</em><i class="triangle"></i>
+							</span>
+						</a>
+					</li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">定制旅行</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">游学</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">签证</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">企业会奖</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">高端游</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">爱玩户外</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">保险</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">特卖会</a></li>
+					<li>
+						<a class="cui_ico_order2" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>旅游订单 &gt;</a>
+					</li>
+				</ul>
+				<ul class="nav_jp" style="display:block">
+					<li><a href="http://hotels.ctrip.com/" class="ly_index">国内机票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国际机票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">特价机票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">机+酒</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">航班动态</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">值机选座</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">退票改签</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">机场攻略</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">机场巴士</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">公务员通道</a></li>
+					<li>
+						<a class="cui_ico_order3" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>机票订单 &gt;</a>
+					</li>
+				</ul>
+				<ul class="nav_hc">
+					<li><a href="http://hotels.ctrip.com/" class="ly_index">国内火车票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国际火车票•通票</a></li>
+					<li>
+						<a class="cui_ico_order4" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>火车票订单 &gt;</a>
+					</li>
+				</ul>
+				<ul class="nav_qc">
+					<li><a href="http://hotels.ctrip.com/" class="ly_index">汽车票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">机场巴士</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">船票</a></li>
+					<li>
+						<a class="cui_ico_order5" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>汽车票订单 &gt;</a>
+					</li>
+				</ul>
+				<ul class="nav_yc">
+					<li><a href="http://hotels.ctrip.com/" class="ly_index">用车首页</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国际租车</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国际接送机</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国内租车</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国际接送机/火车</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国内包车</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">国际包车</a></li>
+					<li>
+						<a class="cui_ico_order6" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>用车订单 &gt;</a>
+					</li>
+				</ul>
+				<ul class="nav_mp">
+					<li><a href="http://hotels.ctrip.com/" class="ly_index">国内门票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">海外门票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">当地玩乐</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">出境wifi•电话卡</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">周末游</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">迪士尼</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">机场停车</a></li>
+					<li>
+						<a class="cui_ico_order7" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>门票订单 &gt;</a>
+					</li>
+				</ul>
+				<ul class="nav_tg">
+					<li><a href="http://hotels.ctrip.com/" class="ly_index">团购首页</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">酒店</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">门票</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">旅游</a></li>
+					<li></li>
+					<li><a href="http://hotels.ctrip.com/">美食</a></li>
+					<li>
+						<a class="cui_ico_order8" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i></i>团购订单 &gt;</a>
+					</li>
+				</ul>
+				</div>
+		</div>
+	</nav>
+	<div class="content">
+		<div class="content_one">
+			<div class="polling">
+				<div class="polling_in">
+					<h3>国际机票查询</h3>
+					<h3>发现低价</h3>
+				</div>
+				<div class="polling_d">
+					<ul class="polling_ul">
+						<li>
+							<span>航程类型</span>
+							<label for="">
+								<input type="radio">单程
+							</label>
+							<label for="">
+								<input type="radio">往返
+							</label>
+							<label for="">							
+								<input type="radio">多程
+							</label>
+						</li>
+						<li>
+							<span>出发城市</span>
+							<input type="text">
+						</li>
+						<li>
+							<span>到达城市</span>
+							<input type="text">
+						</li>
+						<li>
+							<span>出发日期</span>
+							<input type="text">
+						</li>
+						<li>
+							<span>返回日期</span>
+							<input type="text">					
+						</li>
+						<li id="childern">
+							<span>&nbsp&nbsp</span>
+							<label class="two_label">
+								<input type="checkbox" class="input_radio" value="T">带儿童
+							</label>
+							<label class="two_label">
+								<input type="checkbox"class="input_radio" value="T">带婴儿
+							</label>
+						</li>
+					</ul>
+					<div class="sousuo">
+						<input type="button" value="搜索">
+					</div>
+				</div>
+			</div>
+			<a href="">
+				<img src="images/banner-201615.png" alt="">
+			</a>
+			<a href="">
+				<img src="images/un_service_20150917.png" alt="">
+			</a>
+			<a class="aaa" href="">
+				<b></b>
+				<strong>抄底机票特价</strong><br>
+				由携程为你筛选
+			</a>
+			<div class="gongju">
+				<h3>机票工具箱</h3>
+				<div class="gongjus">
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+				</div>
+			</div>
+				<div class="toolbox">
+					<h4>航班动态查询</h4>
+					<div>
+						<label for="">
+							<input type="radio">
+						按航班号查询</label>
+						<label for="">
+							<input type="radio">
+						按起降城市查询</label>
+					</div>
+					<div class="btn">
+						<input class="int" type="text">
+						<input class="search" type="button" value="查询">
+					</div>
+				</div>
+			
+			<div class="why">
+				<h3>为什么选携程？</h3>
+				<img src="images/choose_index.png" alt="">
+			</div>
+			<div class="gonggao">
+				<h3>服务公告</h3>
+				<ul>
+					<li><a href="">·关于禁止携带危险品乘机的通知</a></li>
+					<li><a href="">·携程互联网保险产品简介</a></li>
+					<li><a href="">·关于欺诈短信电话的提醒</a></li>
+					<li><a href="">·海航关于禁止小型锂电池平衡车作为手提行李及托运行李运输提示</a></li>
+					<li><a href="">更多公告 >></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content_left">
+			<div class="lunbo">
+				<ul>
+					<li class="slider" style="display:block"><a href=""><img src="images/a1.jpg" alt=""></a></li>
+					<li class="slider"><a href=""><img src="images/a2.jpg" alt=""></a></li>
+					<li class="slider"><a href=""><img src="images/a3.jpg" alt=""></a></li>
+					<li class="slider"><a href=""><img src="images/a4.jpg" alt=""></a></li>
+					<li class="slider"><a href=""><img src="images/a5.jpg" alt=""></a></li>
+					<li class="slider"><a href=""><img src="images/a6.jpg" alt=""></a></li>
+					<li class="slider"><a href=""><img src="images/a7.jpg" alt=""></a></li>
+				</ul>
+				<div class="small_s">
+					<a href="javascript:void(0)" class="small_a"></a>
+					<a href="javascript:void(0)" class="small_b"></a>
+					<a href="javascript:void(0)" class="small_b"></a>
+					<a href="javascript:void(0)" class="small_b"></a>
+					<a href="javascript:void(0)" class="small_b"></a>
+					<a href="javascript:void(0)" class="small_b"></a>
+					<a href="javascript:void(0)" class="small_b"></a>
+				</div>
+			</div>
+			<h3>航空公司特惠专区</h3>
+			<div class="hangkong">
+				<a href=""></a>
+				<div>
+					<ul>
+					<li>
+						<h3>东海航空 >></h3>
+						<a href=""><span class="ss">06-11</span><span class="sss">北京-兰州</span><span class="ssss">¥410</span></a><br>
+						<a href=""><span class="ss">06-12</span><span class="sss">北京-泉州</span><span class="ssss">¥520</span></a>
+					</li>
+					<li>
+						<h3>厦门航空 >></h3>
+						<a href=""><span class="ss">06-10</span><span class="sss">北京-杭州</span><span class="ssss">¥400</span></a><br>
+						<a href=""><span class="ss">06-12</span><span class="sss">北京-泉州</span><span class="ssss">¥520</span></a>
+					</li>
+					<li>
+						<h3>南方航空 >></h3>
+						<a href=""><span class="ss">06-24</span><span class="sss">北京-长春</span><span class="ssss">¥300</span></a><br>
+						<a href=""><span class="ss">06-24</span><span class="sss">北京-沈阳</span><span class="ssss">¥310</span></a>
+					</li>
+				</ul>
+				</div>
+				<a href=""></a>
+			</div>
+			<div class="clear">
+				<a href="">猜您喜欢</a>
+				<a href="">低价日历</a>
+			</div>
+			<div class="bd">
+				<div class="fengjing">
+					<div class="guess_box">
+						<div class="item_list">
+							<a href="" class="item item_first">
+								<div class="item_pic">
+									<span class="tag_guess">
+										上海
+										<span class="tag_bg"></span>
+										<b></b>
+									</span>
+									<img src="images/sha.jpg" alt="">
+								</div>
+								<div class="item_con">
+									<div class="round">
+										北京
+										<span>→</span>
+										上海
+									</div>
+									<p class="date">
+										<span>06</span>
+										月<span>19</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>3.3</span>折
+										</span>
+										<span class="price">
+											<em><dfn>¥</dfn></em>410
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_pic">
+									<span class="tag_guess">
+										上海
+										<span class="tag_bg"></span>
+										<b></b>
+									</span>
+									<img src="images/xnn.jpg" alt="">
+								</div>
+								<div class="item_con">
+									<div class="round">
+										北京
+										<span>→</span>
+										上海
+									</div>
+									<p class="date">
+										<span>06</span>
+										月<span>19</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>3.3</span>折
+										</span>
+										<span class="price">
+											<em><dfn>¥</dfn></em>410
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_pic">
+									<span class="tag_guess">
+										上海
+										<span class="tag_bg"></span>
+										<b></b>
+									</span>
+									<img src="images/tao.jpg" alt="">
+								</div>
+								<div class="item_con">
+									<div class="round">
+										北京
+										<span>→</span>
+										上海
+									</div>
+									<p class="date">
+										<span>06</span>
+										月<span>19</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>3.3</span>折
+										</span>
+										<span class="price">
+											<em><dfn>¥</dfn></em>410
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_pic">
+									<span class="tag_guess">
+										上海
+										<span class="tag_bg"></span>
+										<b></b>
+									</span>
+									<img src="images/ctu.jpg" alt="">
+								</div>
+								<div class="item_con">
+									<div class="round">
+										北京
+										<span>→</span>
+										上海
+									</div>
+									<p class="date">
+										<span>06</span>
+										月<span>19</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>3.3</span>折
+										</span>
+										<span class="price">
+											<em><dfn>¥</dfn></em>410
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="item_list">
+							<a href="" class="item item_first">
+								<div class="item_con">
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_con">
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_con">
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_con">
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="item_list">
+							<a href="" class="item item_first">
+								<div class="item_con">
+									<div class="tag_orange">抢低价</div>
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_con">
+									<div class="tag_orange">抢低价</div>
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_con">
+									<div class="tag_orange">抢低价</div>
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="item">
+								<div class="item_con">
+									<div class="tag_orange">抢低价</div>
+									<div class="round">
+										北京<span>→</span>大连
+									</div>
+									<p class="date">
+										<span>06</span>月
+										<span>13</span>日
+									</p>
+									<div class="info">
+										<span class="discount">
+											<span>4.0</span>折
+										</span>
+										<span class="price">                                            	<em><dfn>¥</dfn></em>340
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="left_tow">
+				<a href="">
+					<img src="images/600t0g0000007sexk1452.jpg" alt="">
+					<div class="rec_content">
+						<strong>青岛航空</strong>
+						<br>
+						<strong>大波特惠</strong>
+					</div>
+				</a>
+				<a href="">
+					<img src="images/rt.jpg" alt="">
+					<div class="rec_content">
+						<strong>乌鲁木齐航空</strong>
+						<br>
+						<strong>真情回馈</strong>
+					</div>
+				</a>
+				<a href="">
+					<img src="images/600g0e00000078hb6F6E5.jpg" alt="">
+					<div class="rec_content">
+						<strong>超低价机票大抢购</strong>
+						<br>
+						<strong>¥200元封顶</strong>
+					</div>
+				</a>
+				<a href="">
+					<img src="images/60010g00000082sjr2631.jpg" alt="">
+					<div class="rec_content">
+						<strong>长安航空</strong>
+						<br>
+						<strong>随心而飞</strong>
+					</div>
+				</a>
+			</div>
+		</div>	
+		</div>
+		<div class="footeer">
+			<h3>携程旅行网提供机票预订，飞机票查询时刻表。票价查询以及特价机票，便宜机票，打折机票查询预订服务</h3>
+			<p>
+				<strong>热门航线</strong>                   
+				<a href="">  北京到哈尔滨机票  </a>
+				<a href="">  广州到成都机票  </a>
+				<a href="">  广州到青岛机票  </a>
+				<a href="">  上海到西安机票  </a>
+				<a href="">  北京到南昌机票  </a>
+				<a href="">  西安到成都机票  </a>
+				<a href="">  深圳到郑州机票  </a>
+				<a href="">  上海到天津机票  </a>
+				<a href="">  北京到兰州机票  </a>
+				<a href="">  温州到广州机票  </a>
+				<a href="">  西安到深圳机票  </a>
+				<a href="">  青岛到广州机票  </a>
+				<a href="">  海口到广州机票  </a>
+				<a href="">  成都到西安机票  </a>
+				<a href="">  广州到昆明机票  </a>
+				<a href="">  武汉到成都机票  </a>
+				<a href="">  上海到长沙机票  </a>
+				<a href="">  北京到银川机票  </a>
+				<a href="">  上海到沈阳机票  </a>
+				<a href="">  南昌到深圳机票  </a>
+			</p>
+			<p>	
+				<strong>机票工具箱</strong>       
+				<a href="">  打折机票  </a>
+				<a href="">  航班时刻表查询  </a>
+				<a href="">  航班动态查询  </a>
+				<a href="">  机场查询  </a>
+				<a href="">  机票排行榜  </a>
+				<a href="">  机票地图  </a>
+				<a href="">  机票手机版  </a>
+				<a href="">  天海游轮  </a>
+				<a href="">  值机  </a>
+			</p>
+			<p>
+				<strong>打折机票</strong>                    
+				<a href="">  上海特价机票  </a>
+				<a href="">  北京特价机票  </a>
+				<a href="">  广州特价机票  </a>
+				<a href="">  深圳特价机票  </a>
+				<a href="">  重庆特价机票  </a>
+				<a href="">  成都特价机票  </a>
+				<a href="">  昆明特价机票  </a>
+				<a href="">  厦门特价机票  </a>
+				<a href="">  三亚特价机票  </a>
+				<a href="">  大连特价机票  </a>
+				<a href="">  丽江特价机票  </a>
+				<a href="">  天津特价机票  </a>
+				<a href="">  福州特价机票  </a>
+				<a href="">  沈阳特价机票  </a>
+				<a href="">  郑州特价机票  </a>
+				<a href="">  青岛特价机票  </a>
+				<a href="">  西安特价机票  </a>
+				<a href="">  南京特价机票  </a>
+				<a href="">  武汉特价机票  </a>
+				<a href="">  杭州特价机票  </a>
+				<a href="">  更多特价机票  </a>
+			</p>
+			<p>
+				<strong>航空机票</strong>             
+				<a href="">  春秋航空  </a>
+				<a href="">  东方航空  </a>
+				<a href="">  南方航空  </a>
+				<a href="">  中国国航  </a>
+				<a href="">  海南航空  </a>
+				<a href="">  深圳航空  </a>
+				<a href="">  厦门航空  </a>
+				<a href="">  山东航空  </a>
+				<a href="">  吉祥航空  </a>
+				<a href="">  首都航空  </a>
+				<a href="">  四川航空  </a>
+				<a href="">  幸福航空  </a>
+				<a href="">  祥鹏航空  </a>
+				<a href="">  上海航空  </a>
+			</p>
+			<strong>最新预订</strong>
+		</div>
+		  <div id="base_ft">
+        <p><a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引" href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" title="诚聘英才" href="http://job.ctrip.com/">诚聘英才</a>&nbsp;|&nbsp;<a rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp;
+      |&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com/crptravel/default/landing" title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a></p>
+      <p><a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop" target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://hotels.ctrip.com/jiameng#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://vacations.ctrip.com/destination-marketsiteui">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/tour/ingroupline_pages.asp?folder=ingroup0904&amp;file=0177" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright©</a>1999-2017,&nbsp;<a href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a></p>
+      <p class="gns"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502000018"><i class="icon-gns"></i>沪公网备31010502000018号</a></p>
+      <div class="honour_wrap"><a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=163178864X" title="网信编码：163178864X" class="honour1" target="_blank" rel="nofollow">信用评级</a><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow">上海工商</a><a href="http://search.cxwz.org/cert/l/CX20111018000615000623" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow">诚信网站</a><a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网">网络社会征信网</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心">信息举报中心</a><a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站">可信网站</a><a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow">违法和不良信息举报中心</a></div>
+    </div>
+</body>
+</html>

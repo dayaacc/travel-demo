@@ -1,0 +1,243 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none; }
+
+a {
+  color: #06c; }
+
+body {
+  font: 12px/1.5 arial,Simsun, sans-serif;
+  color: #333;
+  background-color: #fff; }
+
+.reg_top_cont {
+  min-width: 980px;
+  max-width: 1180px;
+  height: 59px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: #fff; }
+
+.logo {
+  width: 126px;
+  overflow: hidden;
+  padding-top: 8px;
+  padding-bottom: 8px; }
+  .logo a {
+    display: block;
+    width: 126px;
+    height: 43px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/timg.jpg) 0 0 no-repeat;
+    background-position: 0px -5px; }
+
+.logo_right {
+  float: right;
+  width: 422px;
+  margin-top: -59px;
+  padding-top: 20px;
+  text-align: right;
+  color: #bbb; }
+  .logo_right a {
+    color: #06c;
+    margin-right: 8px;
+    font-size: 12px; }
+  .logo_right .user_service {
+    color: #4c4c4c;
+    margin-left: 8px; }
+  .logo_right a:hover {
+    text-decoration: underline; }
+
+.reg_container {
+  width: 1004px;
+  padding: 0px 10px;
+  margin: 20px auto; }
+
+.reg_warp {
+  position: relative;
+  z-index: 1;
+  padding-right: 280px;
+  overflow: hidden; }
+
+.reg_step {
+  margin: 0 0 15px -12px;
+  overflow: hidden; }
+  .reg_step li {
+    float: left;
+    margin-left: 8px;
+    background: url("../images/tanhao.png") no-repeat;
+    background-position: 182px -285px;
+    color: #9a9a9a; }
+  .reg_step .current {
+    background-position: 182px -228px;
+    color: #799d08; }
+    .reg_step .current span {
+      background-color: #acd252; }
+  .reg_step span {
+    display: inline-block;
+    margin-right: 5px;
+    width: 196px;
+    height: 5px;
+    line-height: 0;
+    background-color: #ddd;
+    border-radius: 3px;
+    vertical-align: middle;
+    overflow: hidden; }
+
+.reg_title {
+  margin-bottom: 20px;
+  height: 33px;
+  overflow: hidden; }
+  .reg_title h2 {
+    float: left;
+    font-family: 'Microsoft YaHei';
+    font-size: 22px;
+    font-weight: normal; }
+  .reg_title .reg_title_cont {
+    float: left;
+    margin: 10px 0 0 10px;
+    color: #666;
+    font-size: 14px; }
+
+strong {
+  font-weight: bold; }
+
+.c_green {
+  color: #10a200;
+  font-family: Tahoma;
+  margin: 0 3px; }
+
+.c_orange {
+  color: #f60; }
+
+.reg_form dl {
+  padding: 10px 0;
+  clear: both; }
+
+.reg_form dt {
+  float: left;
+  margin-right: 10px;
+  width: 88px;
+  line-height: 32px;
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  text-align: right; }
+
+.reg_form dd {
+  float: left;
+  padding-right: 10px; }
+
+.reg_form .r-input {
+  vertical-align: middle;
+  width: 208px;
+  height: 20px;
+  padding: 5px;
+  line-height: 20px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: Tahoma; }
+
+.reg_form .reg_tip {
+  font-size: 14px;
+  line-height: 32px;
+  color: #666;
+  font-family: Tahoma; }
+
+.reg_form img {
+  margin: 0 10px;
+  vertical-align: middle;
+  width: 104px; }
+
+.box_pas_safety {
+  margin-top: 3px; }
+  .box_pas_safety li {
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 16px;
+    border-right: 1px solid #fff;
+    background-color: #F1D0B9;
+    color: #fff; }
+
+.base_error {
+  float: left;
+  margin-left: 98px;
+  padding-right: 20px;
+  clear: both;
+  margin-top: 0;
+  width: auto;
+  min-width: 176px;
+  padding: 2px 0 2px 22px;
+  border: 1px solid #ffb533;
+  background-color: #fff5D1;
+  font-family: Tahoma; }
+  .base_error i {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: -17px;
+    margin-top: 1px;
+    background: url("../images/tanhao.png") no-repeat;
+    background-position: 0 -321px; }
+
+.base_label {
+  font-family: 'Simsun';
+  border-bottom: 1px solid transparent;
+  cursor: pointer; }
+
+.form_space {
+  margin-top: -15px; }
+
+.reg_btn_disabled {
+  color: #999;
+  background-color: #efefef;
+  border: solid 1px #ccc;
+  box-shadow: 0 1px 0 rgba(204, 204, 204, 0.7);
+  cursor: default;
+  margin-bottom: 8px;
+  width: 220px;
+  height: 42px;
+  font-size: 18px;
+  font-family: "Microsoft YaHei",SimSun,Tahoma,Verdana,Arial, sans-serif;
+  text-align: center;
+  border-radius: 3px;
+  clear: both; }
+
+.to_card {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 220px;
+  padding-top: 70px;
+  border: 5px solid #dee6ee;
+  background-color: #fff;
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer; }
+  .to_card i {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    background: url("../images/tanhao.png");
+    background-position: 0 0; }
+
+.reg_footer {
+  width: 950px;
+  clear: both;
+  text-align: center;
+  padding-top: 15px;
+  margin: 0 auto 20px;
+  font-family: Arial,verdana;
+  color: #4c4c4c;
+  font-size: 12px; }
+  .reg_footer a {
+    color: #4c4c4c;
+    margin: 0 1px;
+    text-decoration: none; }

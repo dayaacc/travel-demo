@@ -1,0 +1,331 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+.section {
+  width: auto;
+  max-width: 1180px;
+  min-width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 10px 10px; }
+
+.aside {
+  float: left;
+  width: 149px;
+  margin-right: 20px;
+  border-top: 2px solid #2577E3;
+  border-bottom: 2px solid #2577E3;
+  border-right: 1px solid #ECECEC; }
+  .aside ul {
+    font-family: "microsoft yahei"; }
+    .aside ul a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px; }
+      .aside ul a:hover {
+        color: #3983e5; }
+      .aside ul a li {
+        background-color: #f7f7f7;
+        padding: 10px;
+        border-bottom: 1px solid #ececec; }
+        .aside ul a li:hover i {
+          border-top: 3px solid blue; }
+        .aside ul a li span {
+          height: 14px;
+          padding-left: 10px; }
+        .aside ul a li i {
+          float: right;
+          position: relative;
+          top: 10px;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          line-height: 0;
+          font-size: 0;
+          margin-left: 5px;
+          vertical-align: middle;
+          border-top: 3px solid #333;
+          border-bottom: 0 none;
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent; }
+    .aside ul .twoNav {
+      width: 149px;
+      height: 120px;
+      padding-bottom: 5px;
+      background: #f7f7f7;
+      border-bottom: 1px solid #ececec; }
+      .aside ul .twoNav li {
+        height: 12px;
+        font-size: 12px;
+        padding: 8px 10px 8px 24px;
+        border: none; }
+      .aside ul .twoNav .twoNav_color {
+        background: #FFF;
+        border-left: 3px solid #3983e5; }
+  .aside::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.sectionContainer {
+  float: right;
+  max-width: 1010px;
+  min-width: 810px;
+  min-height: 500px;
+  margin-bottom: 20px; }
+  .sectionContainer .rg_tle {
+    width: 986px;
+    height: 25px;
+    padding: 5px 10px;
+    background: #f7f7f7;
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #ccc; }
+    .sectionContainer .rg_tle #name {
+      height: 23px;
+      line-height: 23px;
+      border: 1px solid #b4b4b4;
+      margin-right: 10px;
+      margin-left: 10px;
+      box-shadow: 1px 1px 3px #ddd inset; }
+    .sectionContainer .rg_tle button {
+      width: 64px;
+      height: 25px; }
+      .sectionContainer .rg_tle button:hover {
+        background: #FCF9F0; }
+  .sectionContainer .table {
+    width: 100%;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e8e8e8;
+    background: #f0f0f0;
+    font-weight: normal;
+    color: #666;
+    text-align: center;
+    overflow: hidden; }
+    .sectionContainer .table th {
+      padding: 4px 0; }
+    .sectionContainer .table .tbody {
+      width: 1008px;
+      height: 98px;
+      overflow: hidden;
+      background: #fff;
+      color: #333;
+      font-size: 14px; }
+  .sectionContainer::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.page_tb {
+  height: 30px;
+  width: 100%;
+  background: #f3f3f3;
+  overflow: hidden; }
+  .page_tb .quanx {
+    float: left;
+    padding: 5px 10px;
+    line-height: 18px;
+    font-size: 12px;
+    border-right: 1px solid #dedede; }
+    .page_tb .quanx input {
+      outline: none; }
+  .page_tb .delete {
+    float: left;
+    padding: 5px 10px;
+    line-height: 18px;
+    font-size: 12px;
+    border-right: 1px solid #dedede; }
+    .page_tb .delete .yangshi {
+      font-size: 20px;
+      color: blue; }
+    .page_tb .delete input {
+      border: 0;
+      color: blue; }
+  .page_tb::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+/*add people*/
+.add_people {
+  border-color: #ccc;
+  border: 1px solid #d2ddeb;
+  margin-bottom: 20px;
+  float: left;
+  max-width: 1010px;
+  min-width: 810px;
+  min-height: 500px; }
+
+.add_title {
+  position: relative;
+  padding: 13px 0 13px 20px;
+  background-color: #f1f1f1; }
+  .add_title h3 {
+    font-family: Microsoft yahei;
+    font-weight: 600;
+    font-size: 16px; }
+  .add_title .h3_rg {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-size: 14px;
+    color: #0066cc; }
+
+.add_content {
+  padding: 20px; }
+
+.add_form {
+  font-size: 14px;
+  margin-bottom: 20px; }
+  .add_form li {
+    padding-left: 0;
+    margin-bottom: 6px; }
+    .add_form li .tit {
+      display: inline-block;
+      position: relative;
+      width: 70px;
+      padding-right: 20px;
+      vertical-align: middle;
+      line-height: 32px;
+      text-align: right;
+      color: #666; }
+    .add_form li input {
+      box-shadow: none;
+      height: 20px;
+      line-height: 20px;
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      font-family: "Microsoft YaHei"; }
+    .add_form li .select-cty {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative; }
+      .add_form li .select-cty input {
+        padding-right: 26px;
+        width: 190px; }
+    .add_form li .add_ncn {
+      width: 186px; }
+    .add_form li .radio-title {
+      display: inline;
+      cursor: pointer;
+      margin-right: 0; }
+      .add_form li .radio-title input {
+        display: inline;
+        vertical-align: middle;
+        margin-right: 8px;
+        font-size: 14px; }
+  .add_form .li_btn {
+    padding: 20px 0 0 100px; }
+    .add_form .li_btn button {
+      display: inline-block;
+      width: 90px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 30px;
+      position: relative;
+      color: #fff;
+      font-family: "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.4em;
+      text-indent: 0.4em;
+      box-shadow: 0 1px 0 rgba(95, 50, 0, 0.7);
+      border-radius: 3px;
+      overflow: visible; }
+    .add_form .li_btn .add {
+      background-color: #ffb000;
+      border: solid 1px #e77c00; }
+    .add_form .li_btn .cancel {
+      background-color: #fff;
+      border: 1px solid #b6b6b6;
+      box-shadow: 0 1px 0 #ccc;
+      color: #111; }
+
+#base_ft {
+  width: 980px !important;
+  clear: both;
+  text-align: center;
+  padding-top: 15px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+  font-family: Arial, verdana !important;
+  color: #4c4c4c;
+  font-size: 12px; }
+  #base_ft p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial !important; }
+  #base_ft a {
+    color: #4c4c4c;
+    white-space: nowrap; }
+  #base_ft a:hover {
+    text-decoration: underline; }
+  #base_ft .gns {
+    margin-top: 7px; }
+  #base_ft .icon-gns {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background-image: url("../images/xinyong.png");
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 0 -235px;
+    vertical-align: middle; }
+  #base_ft .honour_wrap {
+    display: inline-block;
+    padding-top: 10px;
+    text-align: left; }
+    #base_ft .honour_wrap a {
+      float: left;
+      margin: 0 5px;
+      width: 88px;
+      height: 32px;
+      border: 1px solid #d1d1d1;
+      border-radius: 2px;
+      font: 12px/32px Simsun;
+      color: #666;
+      overflow: hidden;
+      text-indent: -99em;
+      white-space: normal;
+      background-image: url("../images/xinyong.png");
+      background-color: #fff;
+      background-repeat: no-repeat; }
+    #base_ft .honour_wrap .honour1 {
+      background-position: -88px -50px;
+      text-indent: 36px; }
+    #base_ft .honour_wrap .honour2 {
+      background-position: -88px -85px;
+      text-indent: 36px; }
+    #base_ft .honour_wrap .honour3 {
+      background-position: 0 -50px; }
+    #base_ft .honour_wrap .honour4 {
+      background-position: -88px -118px;
+      text-indent: 0;
+      padding: 2px 0 2px 37px;
+      width: 51px;
+      height: 28px;
+      line-height: 1.2; }
+    #base_ft .honour_wrap .honour5 {
+      width: 116px;
+      background-position: 0 -387px; }
+    #base_ft .honour_wrap .honour6 {
+      background-position: 0 -118px; }
+    #base_ft .honour_wrap .honour8 {
+      background-position: 0 -193px;
+      width: 90px; }
+
+.number {
+  background-color: #fff;
+  border-color: #06c;
+  color: #fff; }
+  .number a {
+    background-color: #06c;
+    border-color: #06c;
+    color: #fff; }

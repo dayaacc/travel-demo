@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员登录-携程网旅游</title>
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="ICON" href="http://www.ctrip.com/favicon.ico">
+</head>
+<body>
+	<!--header start-->
+	<header>
+		<h1 class="hd_logo">
+			<a href="http://www.ctrip.com" title="携程旅行网"><img src="./images/timg.jpg" alt="">携程旅行网</a>
+		</h1>
+	</header>
+	<!-- header end-->
+	<!--login start-->
+	<form action="" method="post" id="form1">
+		<div class="lg_bd">
+			<div class="lg_loginwarp">
+				<div class="lg_box">
+					<h2 class="lg_box_title">
+					<span><a href="regist/register.aspx">立即注册</a>，享积分换礼、返现等专属优惠！</span>会员登录
+					</h2>
+					<div class="lg_select">
+		                <label class="label">
+		                	<input type="radio" checked="checked">普通登录
+		                </label>
+		                <label class="label">
+		                	<input type="radio">手机动态密码登录
+		                </label>
+	                </div>
+	                <ul class="lg_ul1" style="display:none">
+	                	<li>
+	                		<label class="tt">登录名</label>
+	                		<input name="username" type="text" placeholder="用户名/卡号/手机/邮箱" style="color: gray;" value="" class="lg_user">
+	                	</li>
+	                	<li>
+	                		<label class="tt">密　码</label>
+	                		<input name="password" type="password" value="" class="lg_pass">
+	                		<a href="https://accounts.ctrip.com/member/PassWord/VerifyUserInfo.aspx" id="forgetPwd" class="lg_forget_pwd">忘记密码?</a>
+	                	</li>
+	                	<li >
+	                		<div class="lg_btn">
+	                			<label class="lg_btn_label">
+	                				<span>
+	                					<input type="checkbox" checked="checked" class="lg_check_lg">
+	                					<label >30天内自动登录</label>
+	                				</span>
+	                			</label>
+	                		</div>
+	                	</li>
+	                	<li>
+	                		<div class="lg_sub">
+	                			<input type="submit" name="submit" value="登录" class="submit">
+	                		</div>
+	                	</li>
+	                </ul>
+	                <ul class="lg_ul1" style="display: block;" id="phonePwdUl">
+					<li>
+						<label class="tt">手机号</label>
+						<input name="phone" type="text" placeholder="请输入注册手机号" class="lg_phone" style="color: gray;">
+					</li>
+                    <li>
+                    	<label class="tt">验证码</label>
+                    	<input name="txtCodePwd"  placeholder="不区分大小写" style="color: grey;" class="lg_yzm">
+                    <img src="" class="lg_img_yzm"</li>
+					<li>
+						<label class="tt">密　码</label>
+						<input type="text" class="lg_dtpass" placeholder="动态密码" style="color: gray;">
+						<a href="javascript:;" class="btn_blue">发送动态密码</a>
+                    </li>
+					<li >
+                		<div class="lg_btn">
+                			<label class="lg_btn_label">
+                				<span>
+                					<input type="checkbox" checked="checked" class="lg_check_lg">
+                					<label >30天内自动登录</label>
+                				</span>
+                			</label>
+                		</div>
+                	</li>
+					<li>
+                		<div class="lg_sub">
+                			<input type="submit" name="submit" value="登录" class="submit">
+                		</div>
+                	</li>
+				</ul>
+	                <div class="lg_bottom">
+	                	<div class="lg_bottom_ct">
+							<a href="javascript:;">合作卡登录</a>
+							<a href="http://ct.ctrip.com/crpTravel/zh-cn">公司客户登录</a>
+	                        <a href="http://b.ctrip.com/welfarelogin/login/">福利平台登录</a>
+						</div>
+						<dl>
+							<dt>您还可以使用以下方式登录：</dt>
+							<dd>
+								<a href="javascript:void(0);" url="alipayLogin/AlipayAuthorize.aspx" class="alipay">支付宝</a>
+							    <a href="javascript:void(0);" url="QQLogin/QQAuthorize.aspx" class="qq">QQ</a>
+	                             <a href="javascript:void(0);" url="BaiduLogin/BauiduAuthorize.aspx" class="baidu">百度</a>
+							    <a href="javascript:void(0);" class="sina" url="SinaLogin/SinaAuthorize2.aspx">新浪微博</a>
+	                            <a href="javascript:void(0)" class="wechat" url="WeChatLogin/Authorize.aspx" >微信</a>
+							    <a href="javascript:void(0);" url="neteLogin/NeteAuthorize.aspx" class="wangyi">网易</a>
+	                            <a href="javascript:void(0);" url="RenrenLogin/Authorize.aspx" class="renren">人人网</a>
+							</dd>
+						</dl>
+	                </div>
+				</div>
+			</div>
+			<div class="lg_bd_pic">
+				<div class="lg_pic_outer">
+					<a href="javascript:viod()" class="pic_a">
+						<img src="./images/login-l.jpg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!--login end-->
+	<!--footer start-->
+	<footer>
+		<p class="copyright">
+                <a rel="nofollow" href="https://accounts.ctrip.com/member/emailregist.aspx" title="免费注册">免费注册</a> | 
+                <a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" title="网站导航">网站导航</a> | 
+                <a href="http://pages.ctrip.com/public/sitemap/cityhotel.htm" title="宾馆索引">宾馆索引</a> | 
+                <a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" title="服务说明">服务说明</a> | 
+                <a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" title="关于携程">关于携程</a> | 
+                <a rel="nofollow" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a> | 
+                <a rel="nofollow" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a> | 
+                <a rel="nofollow" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a> | 
+                <a rel="nofollow" href="http://pages.ctrip.com/commerce/promote/201305/other/qylpk/index.html" title="企业礼品卡采购">企业礼品卡采购</a> | 
+                <a rel="nofollow" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a> | 
+                <a rel="nofollow" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a> | 
+                <a rel="nofollow" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a> | 
+                <a rel="nofollow" class="suggestions" href="http://my.ctrip.com/uxp/Community/CommunityAdvice.aspx" target="_blank" title="我要提建议">我要提建议</a>
+            </p>
+            <p class="copyright">
+                <a href="http://pages.ctrip.com/public/copyright.htm" rel="nofollow">Copyright©</a>
+                 1999-2017,
+                <a href="http://www.ctrip.com/"> ctrip.com</a>. all rights reserved.
+            </p>
+	</footer>
+	<!--end-->
+</body>
+</html>
